@@ -1,0 +1,5 @@
+version: "v1"
+name: Search witg searx
+description: Tool for searchin the web.
+contact_email: 
+legal_info_url:
