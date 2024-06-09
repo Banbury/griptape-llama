@@ -1,3 +1,5 @@
+from datetime import date
+
 from griptape.structures import Agent
 from griptape.rules import Rule
 from griptape.tools import TaskMemoryClient
@@ -16,9 +18,9 @@ class SearxAgent(Agent):
             "{{args[0]}}",
             config=LMStudioConfig(),
             rules=[
+                Rule(f"Today's date is {date.today().strftime('%B %d, %Y')}."),
                 Rule("A thought should never include the answer to the question."),
                 Rule("You are a unbiased, helpful assistant, who will answer all questions to the best of your abilities."),
-                Rule("Always include the sources with links with your answer.")
             ],
             tools=[
                 searx_tool,

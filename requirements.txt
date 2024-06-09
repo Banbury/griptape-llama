@@ -1,0 +1,3 @@
+griptape[all]>=0.26.0
+mesop>=0.7.2
+pydantic>=2.7.3
